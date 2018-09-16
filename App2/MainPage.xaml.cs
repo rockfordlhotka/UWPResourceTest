@@ -26,5 +26,11 @@ namespace App2
         {
             this.InitializeComponent();
         }
-    }
+
+		private async void Page_Loaded(object sender, RoutedEventArgs e)
+		{
+			var local = await Csla.DataPortal.CreateAsync<Class1>();
+			var fromdll = await Csla.DataPortal.CreateAsync<ClassLibrary1.Class1>();
+		}
+	}
 }
